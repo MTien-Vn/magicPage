@@ -51,9 +51,12 @@ $('#bordBtn').click(function() {
 })
 
 $('#interesBtn').click(function() {
-    alert("Cảm ơn, bạn đáng yêu quá");
-    $('#question').removeAttr('style');
-    $('#question').css({ "display": "block" });
+    alert("Cảm ơn, bạn đáng yêu quá. Mình còn câu hỏi nữa nhé !");
+    $('#question1').removeAttr('style');
+    $('#question1').css({ "display": "none" });
+
+    $('#question2').removeAttr('style');
+    $('#question2').css({ "display": "block" });
 })
 
 $('#noBtn').click(function() {
@@ -61,6 +64,6 @@ $('#noBtn').click(function() {
 })
 
 $('#yesBtn').click(function() {
-    alert("Đây là người muốn rủ bạn đi chơi");
     alert("Thế là bạn đồng ý rồi nhé");
+    alert("Đây là người muốn rủ bạn đi chơi");
 })
