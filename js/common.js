@@ -11,16 +11,6 @@ $(document).ready(function() {
 
 })
 
-$(window).bind("beforeunload", function() {
-    alert("Sao bạn vội đi thế, mình chưa hịp chào nhau cơ mà :D");
-})
-
-window.addEventListener("beforeunload", function(e) {
-    var confirmationMessage = "\o/";
-
-    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-    return confirmationMessage; //Webkit, Safari, Chrome
-});
 
 $('#dontClickMe').click(function() {
     alert("Đã bảo là đừng có click rồi mà :((");
@@ -43,6 +33,19 @@ $('#clickMeBtn').click(function() {
         alert("Ấn lần nữa đi, nó không chạy nữa đâu !");
     } else if (status === '3') {
         alert("Mình sẽ có câu hỏi cho bạn ở cuối bài nhé !\n Đừng vội rời đi, buồn lắm đó\n Bạn thử kéo xuống dưới xem sao.");
+    }
+    if (status == '3') {
+        $('#section1').removeAttr('style');
+        $('#section1').css({ "display": "block" });
+        $('#section2').removeAttr('style');
+        $('#section2').css({ "display": "block" });
+        $('#section3').removeAttr('style');
+        $('#section3').css({ "display": "block" });
+        $('#section4').removeAttr('style');
+        $('#section4').css({ "display": "blcok" });
+
+        $('#section5').removeAttr('style');
+        $('#section5').css({ "display": "blcok" });
     }
 })
 
